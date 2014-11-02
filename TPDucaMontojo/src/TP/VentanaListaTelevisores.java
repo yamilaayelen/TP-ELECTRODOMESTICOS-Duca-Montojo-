@@ -11,6 +11,7 @@ import javax.swing.JButton;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.util.ArrayList;
 
 public class VentanaListaTelevisores extends JFrame {
 
@@ -83,10 +84,11 @@ public class VentanaListaTelevisores extends JFrame {
 		lblAB.setBounds(141, 177, 104, 14);
 		contentPane.add(lblAB);
 		
-		JButton btnListar = new JButton("Listar");
-		btnListar.addActionListener(new ActionListener() {
+		JButton listar = new JButton("Listar");
+		listar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0)
 			{
+				ArrayList<Television> lista = new ArrayList<Television>();
 				float r1, r2;
 				char c;
 				
@@ -94,11 +96,14 @@ public class VentanaListaTelevisores extends JFrame {
 				r2=Integer.parseInt(rango2.getText());
 				c=(char)consumo.getText().charAt(0);
 				
-				Principal.listaTele(r1, r2, c);
+				lista=Principal.listaTele(r1, r2, c);
+				MostrarListaT muestraT = new MostrarListaT();
+				muestraT.setVisible(true);
+				muestraT.listar(lista);
 			}
 		});
-		btnListar.setBounds(141, 235, 89, 23);
-		contentPane.add(btnListar);
+		listar.setBounds(141, 235, 89, 23);
+		contentPane.add(listar);
 		
 		JButton btnSalir = new JButton("Salir");
 		btnSalir.addActionListener(new ActionListener() {

@@ -15,6 +15,7 @@ import java.awt.event.ActionEvent;
 
 public class MostrarListaL extends JFrame {
 
+	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTable table;
 
@@ -71,7 +72,7 @@ public class MostrarListaL extends JFrame {
 		table.setModel(tablaL);
 			
 			
-		//crear el tablemodel (LisgaLavarropas)
+		//crear el tablemodel (Lista Lavarropas)
 		//Asignarle l como datasource(setDataSource)
 		//asignarle al jtabl el datasource
 	}

@@ -135,7 +135,7 @@ public class Principal
 		return listaLavas;
 	}
 	
-	public static void listaTele(float r1, float r2, char c)
+	public static ArrayList<Television> listaTele(float r1, float r2, char c)
 	{
 		
 		for(int i=0; i<televisores.size();i++)
@@ -151,11 +151,6 @@ public class Principal
 
 		Collections.sort(listaTeles);
 		
-		System.out.println();
-		System.out.println();
-		
-		for(Television t: listaTeles){
-			System.out.println(t.toString());
-		}
+		return listaTeles;
 	}
 }
