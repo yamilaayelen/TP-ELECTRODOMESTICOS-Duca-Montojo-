@@ -30,17 +30,17 @@ public class ListaTelevisores extends AbstractTableModel {
 	}
 
 	public Object getValueAt(int rowIndex, int columnIndex) {
-		Television l= dataSource.get(rowIndex);
+		Television t= dataSource.get(rowIndex);
 		Object o;
 		switch (columnIndex) {
 		case 0:
-			o=l.getDescrip();
+			o=t.getDescrip();
 			break;
 		case 1:
-			o=l.getPrecioBase();
+			o=t.getPrecioBase();
 			break;
 		case 2:
-			o=l.getConsumoEnergetico();
+			o=t.getConsumoEnergetico();
 			break;
 		default:
 			o=null;
