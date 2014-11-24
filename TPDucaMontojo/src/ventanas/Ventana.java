@@ -10,7 +10,9 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-import javax.swing.JLabel;
+import java.awt.Color;
+import org.eclipse.wb.swing.FocusTraversalOnArray;
+import java.awt.Component;
 
 public class Ventana extends JFrame {
 
@@ -37,9 +39,10 @@ public class Ventana extends JFrame {
 	 * Create the frame.
 	 */
 	public Ventana() {
-		setTitle("MENU");
+		setForeground(Color.LIGHT_GRAY);
+		setTitle("MENU ELECTRODOMESTICOS");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 505, 385);
+		setBounds(100, 100, 421, 371);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -54,7 +57,7 @@ public class Ventana extends JFrame {
 			}
 
 		});
-		btnAltaLavarropas.setBounds(27, 82, 155, 23);
+		btnAltaLavarropas.setBounds(10, 30, 195, 48);
 		contentPane.add(btnAltaLavarropas);
 		
 		JButton btnAltaTelevisores = new JButton("Alta Televisores");
@@ -65,7 +68,7 @@ public class Ventana extends JFrame {
 				altaT.setVisible(true);
 			}
 		});
-		btnAltaTelevisores.setBounds(232, 82, 155, 23);
+		btnAltaTelevisores.setBounds(215, 30, 172, 48);
 		contentPane.add(btnAltaTelevisores);
 		
 		JButton btnModifca = new JButton("Modifca Lavarropas");
@@ -76,7 +79,7 @@ public class Ventana extends JFrame {
 				modificaL.setVisible(true);
 			}
 		});
-		btnModifca.setBounds(27, 128, 155, 23);
+		btnModifca.setBounds(10, 89, 195, 39);
 		contentPane.add(btnModifca);
 		
 		JButton btnModificaTelevisores = new JButton("Modifica Televisor");
@@ -87,7 +90,7 @@ public class Ventana extends JFrame {
 				modificaT.setVisible(true);
 			}
 		});
-		btnModificaTelevisores.setBounds(232, 128, 155, 23);
+		btnModificaTelevisores.setBounds(215, 89, 172, 39);
 		contentPane.add(btnModificaTelevisores);
 		
 		JButton btnBajaLavarropas = new JButton("Baja Lavarropas");
@@ -98,7 +101,7 @@ public class Ventana extends JFrame {
 				bajaL.setVisible(true);
 			}
 		});
-		btnBajaLavarropas.setBounds(27, 172, 155, 23);
+		btnBajaLavarropas.setBounds(10, 139, 195, 48);
 		contentPane.add(btnBajaLavarropas);
 		
 		JButton btnBajaTelevisores = new JButton("Baja Televisor");
@@ -109,7 +112,7 @@ public class Ventana extends JFrame {
 				bajaT.setVisible(true);
 			}
 		});
-		btnBajaTelevisores.setBounds(232, 172, 155, 23);
+		btnBajaTelevisores.setBounds(215, 139, 172, 48);
 		contentPane.add(btnBajaTelevisores);
 		
 		JButton listaLavas = new JButton("Listado Lavarropas");
@@ -120,12 +123,8 @@ public class Ventana extends JFrame {
 				listaL.setVisible(true);
 			}
 		});
-		listaLavas.setBounds(27, 219, 155, 23);
+		listaLavas.setBounds(10, 198, 195, 44);
 		contentPane.add(listaLavas);
-		
-		JLabel lblElectrodomsticos = new JLabel("Electrodom\u00E9sticos:");
-		lblElectrodomsticos.setBounds(160, 34, 140, 14);
-		contentPane.add(lblElectrodomsticos);
 		
 		JButton listaTeles = new JButton("Listado Televisores");
 		listaTeles.addActionListener(new ActionListener() {
@@ -135,7 +134,7 @@ public class Ventana extends JFrame {
 				listaT.setVisible(true);
 			}
 		});
-		listaTeles.setBounds(232, 219, 155, 23);
+		listaTeles.setBounds(215, 198, 172, 44);
 		contentPane.add(listaTeles);
 		
 		JButton btnNewButton = new JButton("Salir");
@@ -145,7 +144,8 @@ public class Ventana extends JFrame {
 				dispose();
 			}
 		});
-		btnNewButton.setBounds(160, 281, 99, 33);
+		btnNewButton.setBounds(152, 270, 117, 44);
 		contentPane.add(btnNewButton);
+		setFocusTraversalPolicy(new FocusTraversalOnArray(new Component[]{contentPane, btnAltaLavarropas, btnAltaTelevisores, btnModifca, btnModificaTelevisores, btnBajaLavarropas, btnBajaTelevisores, listaLavas, listaTeles, btnNewButton}));
 	}
 }
