@@ -1,4 +1,5 @@
-package TP;
+package ventanas;
+
 
 import java.awt.EventQueue;
 
@@ -9,6 +10,8 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+
+import TP.Principal;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -100,7 +103,7 @@ public class VentanaAltaLavarropas extends JFrame {
 		btnAgregar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) 
 			{
-				char ce;
+				//char ce;
 				String descripcionAL, precioBaseAL, pesoAL, cargaAL, colorAL = null, consumoAL = null;
 				
 				descripcionAL=descripcion.getText();
@@ -110,7 +113,7 @@ public class VentanaAltaLavarropas extends JFrame {
 				colorAL=color.getText();
 				//vcolor=Color.validaColor(colorAL);
 				consumoAL=consumo.getText();
-				ce = (char)consumoAL.charAt(0);
+				//ce = (char)consumoAL.charAt(0);
 				//vconsumo=ConsumoEnergetico.validaConsumo(ce);
 				
 				Principal.AltaLavarropas(descripcionAL, precioBaseAL, pesoAL, cargaAL, colorAL, consumoAL);

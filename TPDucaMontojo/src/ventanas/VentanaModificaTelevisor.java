@@ -1,4 +1,4 @@
-package TP;
+package ventanas;
 
 import java.awt.EventQueue;
 
@@ -9,6 +9,9 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+
+import TP.Principal;
+import TP.Television;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -73,7 +76,7 @@ public class VentanaModificaTelevisor extends JFrame {
 			Television tele;
 			char ce = 0;
 			
-			String nuevaDesc, nuevoColor, nuevoPrecio, nuevoPeso, nuevoConsumo, nuevaResolucion, nuevoSintonizador;
+			//String nuevaDesc, nuevoColor, nuevoPrecio, nuevoPeso, nuevoConsumo, nuevaResolucion, nuevoSintonizador;
 				
 			desc=descripI.getText();
 			tele=Principal.BuscaTele(desc);
@@ -90,7 +93,7 @@ public class VentanaModificaTelevisor extends JFrame {
 			sintonizador.setText(String.valueOf(tele.getSintonizadorTDT()));
 			
 			//modifica y guarda los atributos del objeto lava
-			
+			/*
 			 nuevaDesc=descripcion.getText();
 			 nuevoPrecio=precioBase.getText();
 			 nuevoPeso=peso.getText();
@@ -98,7 +101,8 @@ public class VentanaModificaTelevisor extends JFrame {
 			 nuevoConsumo=consumo.getText();
 			 nuevaResolucion=resolucion.getText();
 			 nuevoSintonizador=sintonizador.getText();
-			 		
+			 */
+			
 			}
 			
 			else if(tele==null)

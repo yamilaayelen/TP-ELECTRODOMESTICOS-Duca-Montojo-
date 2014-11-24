@@ -1,4 +1,4 @@
-package TP;
+package ventanas;
 
 import java.awt.EventQueue;
 
@@ -10,10 +10,12 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 
+import TP.Principal;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class VentanaBajaLavarropas extends JFrame {
+public class VentanaBajaTelevisor extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
@@ -27,7 +29,7 @@ public class VentanaBajaLavarropas extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					VentanaBajaLavarropas frame = new VentanaBajaLavarropas();
+					VentanaBajaTelevisor frame = new VentanaBajaTelevisor();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -39,49 +41,50 @@ public class VentanaBajaLavarropas extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public VentanaBajaLavarropas() {
+	public VentanaBajaTelevisor() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 373, 229);
+		setBounds(100, 100, 425, 227);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("Ingrese descripcion del Lavarropas a eliminar:");
-		lblNewLabel.setBounds(10, 33, 335, 14);
-		contentPane.add(lblNewLabel);
+		JLabel lblIngreseDescripcionDel = new JLabel("Ingrese descripcion del Televisor a eliminar:");
+		lblIngreseDescripcionDel.setBounds(10, 27, 389, 14);
+		contentPane.add(lblIngreseDescripcionDel);
 		
 		descrip = new JTextField();
-		descrip.setBounds(46, 72, 213, 20);
+		descrip.setBounds(59, 62, 201, 20);
 		contentPane.add(descrip);
 		descrip.setColumns(10);
 		
-		JButton btnEliminar = new JButton("Eliminar");
-		btnEliminar.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0)
+		JButton eliminar = new JButton("Eliminar");
+		eliminar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) 
 			{
 				int b;
-				String descripEL;
+				String descripET;
 				
-				descripEL= descrip.getText();
-				b=Principal.bajaLava(descripEL);
+				descripET= descrip.getText();
+				b=Principal.bajaTele(descripET);
 				if(b==0)
 				{
-				JOptionPane.showMessageDialog(null, "Lavarropas no encontrado");
+				JOptionPane.showMessageDialog(null, "Televisor no encontrado");
 				}
+
 			}
 		});
-		btnEliminar.setBounds(42, 127, 89, 23);
-		contentPane.add(btnEliminar);
+		eliminar.setBounds(45, 121, 89, 23);
+		contentPane.add(eliminar);
 		
 		btnSalir = new JButton("Salir");
 		btnSalir.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) 
+			public void actionPerformed(ActionEvent arg0)
 			{
 				dispose();
 			}
 		});
-		btnSalir.setBounds(193, 127, 89, 23);
+		btnSalir.setBounds(209, 121, 89, 23);
 		contentPane.add(btnSalir);
 	}
 

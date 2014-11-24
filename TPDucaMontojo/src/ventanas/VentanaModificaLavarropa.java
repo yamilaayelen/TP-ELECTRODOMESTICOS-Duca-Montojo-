@@ -1,4 +1,4 @@
-package TP;
+package ventanas;
 
 import java.awt.EventQueue;
 
@@ -7,6 +7,9 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+
+import TP.Lavarropas;
+import TP.Principal;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -65,7 +68,7 @@ public class VentanaModificaLavarropa extends JFrame {
 				Lavarropas lava;
 				char ce = 0, c;
 				
-				String nuevaDesc, nuevoColor, nuevoPrecio, nuevoPeso, nuevaCarga, nuevoConsumo;
+				//String nuevaDesc, nuevoColor, nuevoPrecio, nuevoPeso, nuevaCarga, nuevoConsumo;
 					
 					
 				desc=descripI.getText();

@@ -1,9 +1,11 @@
-package TP;
+package ventanas;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.swing.table.AbstractTableModel;
+
+import TP.Lavarropas;
 
 public class ListaLavarropas extends AbstractTableModel {
 

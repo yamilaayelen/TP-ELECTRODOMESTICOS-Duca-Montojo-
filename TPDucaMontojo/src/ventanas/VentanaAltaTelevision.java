@@ -1,4 +1,4 @@
-package TP;
+package ventanas;
 
 import java.awt.EventQueue;
 
@@ -11,6 +11,9 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 
+
+
+import TP.Principal;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -75,7 +78,7 @@ public class VentanaAltaTelevision extends JFrame {
 		btnAgregar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) 
 			{
-				char ce;
+				//char ce;
 				String descripcionAT, precioBaseAT, pesoAT, colorAT = null, consumoAT = null, resolucionAT, sintonizadorAT;
 				
 				descripcionAT=descripcion.getText();
@@ -84,7 +87,7 @@ public class VentanaAltaTelevision extends JFrame {
 				colorAT=color.getText();
 				//vcolor=Color.validaColor(colorAT);
 				consumoAT=consumo.getText();
-				ce = (char)consumoAT.charAt(0);
+				//ce = (char)consumoAT.charAt(0);
 				//vconsumo=ConsumoEnergetico.validaConsumo(ce);
 		
 				resolucionAT=resolucion.getText();
